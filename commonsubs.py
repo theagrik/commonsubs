@@ -39,7 +39,7 @@ correct = False
 while not correct:
     try:
         print("\nСейчас нужно прикрепить ссылку к сообществу, подписчики которого будут искаться в других группах.")
-        print("Например: https://vk.com/dzhband, vk.com/dzhband, @dzhband или dzhband.")
+        print("Например: https://vk.com/catpy, vk.com/catpy, @catpy или catpy.")
         mainpub = input("Введи ссылку: ").replace("http://", "").replace("https://", "").replace("www.", "").replace("vk.com/", "").replace("vkontakte.ru", "").replace("/", "").replace("@", "").replace("*", "")
         mainpub = vk.groups.getById(group_id=mainpub, fields="members_count")[0]
         correct = True
